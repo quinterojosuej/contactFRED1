@@ -1,0 +1,19 @@
+<template>
+    <div class="slds-box slds-theme_default">
+        <div class="slds-text-body_regular" style="max-height: 400px;">This is the contact FRED component :P</div>
+
+        <lightning-combobox name="category" label="Categories" value={chooseCategory} placeholder="Please choose!"
+            options={optionsCategory} onchange={handleCategoryChange}></lightning-combobox>
+
+        <template if:true={outputtedValue}>
+            <lightning-combobox name="dates" label="Dates" value={chooseDate} placeholder="Please choose!" 
+            options={optionsDate} onchange={handleDateChange}></lightning-combobox>
+
+            <template if:true={outputtedValue2}>
+                <h2>At that time it was: {outputtedValue2}</h2>
+            </template>
+        </template>
+
+        <!-- <lightning-button label="Test call get all series" title="Test call get all series" onclick={handleTestButton}></lightning-button> -->
+    </div>
+</template>
